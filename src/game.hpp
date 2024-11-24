@@ -6,21 +6,16 @@
 // std
 #include <cstdint>
 
-namespace rpg
-{
+namespace rpg {
 
-    class Game
-    {
-    public:
-        Game()
-        {
-            setup();
-        }
+class Game {
+public:
+  Game() { setup(); }
 
-        void setup();
-        void loop();
+  void setup();
+  void loop();
 
-    private:
-        std::shared_ptr<Player> m_pPlayer;
-    };
-}
+private:
+  std::shared_ptr<Player> m_pPlayer;
+};
+} // namespace rpg

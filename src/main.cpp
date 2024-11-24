@@ -1,9 +1,8 @@
 // local
 #include "game.hpp"
 
-int main()
-{
-    rpg::Game game{};
+int main() {
+  rpg::Game game{};
 
-    game.loop();
+  game.loop();
 }

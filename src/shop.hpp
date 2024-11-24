@@ -6,23 +6,21 @@
 
 // std
 #include <cstdint>
-#include <vector>
 #include <iostream>
 #include <memory>
+#include <vector>
 
-namespace rpg
-{
-    typedef std::uint64_t cost;
+namespace rpg {
+typedef std::uint64_t cost;
 
-    class Shop
-    {
-    public:
-        Shop(std::shared_ptr<Player> player) : m_pPlayer(player) {}
+class Shop {
+public:
+  Shop(std::shared_ptr<Player> player) : m_pPlayer(player) {}
 
-        void loop();
+  void loop();
 
-    private:
-        std::shared_ptr<Player> m_pPlayer;
-    };
+private:
+  std::shared_ptr<Player> m_pPlayer;
+};
 
-}
+} // namespace rpg

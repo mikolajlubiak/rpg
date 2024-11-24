@@ -6,9 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 include(CheckCXXCompilerFlag)
-include(FetchContent)
-set(FETCHCONTENT_UPDATES_DISCONNECTED ON)
-set(FETCHCONTENT_QUIET OFF)
 
 # Enable flag if supported
 function(enable_cxx_compiler_flag_if_supported flag)
@@ -29,9 +26,9 @@ file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
 file(GLOB_RECURSE HEADERS CONFIGURE_DEPENDS src/*.hpp)
 
 # Enable extra warnings
-#enable_cxx_compiler_flag_if_supported("-Wall")
-#enable_cxx_compiler_flag_if_supported("-Wextra")
-#enable_cxx_compiler_flag_if_supported("-pedantic")
+enable_cxx_compiler_flag_if_supported("-Wall")
+enable_cxx_compiler_flag_if_supported("-Wextra")
+enable_cxx_compiler_flag_if_supported("-pedantic")
 
 # Add binary
 add_executable(${PROJECT_NAME})
